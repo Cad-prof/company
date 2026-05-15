@@ -46,7 +46,7 @@ public class LoginServlet extends HttpServlet {
         }
     }
 
-    @WebServlet("/welcome")
+//    @WebServlet("/welcome")
     public static class WelcomeServlet extends HttpServlet {
 
         private static final Logger logger = LoggerFactory.getLogger(WelcomeServlet.class);
