@@ -45,4 +45,17 @@ public class LoginServlet extends HttpServlet {
             req.getRequestDispatcher("/index.jsp").forward(req, resp);
         }
     }
+
+    @WebServlet("/welcome")
+    public static class WelcomeServlet extends HttpServlet {
+
+        private static final Logger logger = LoggerFactory.getLogger(WelcomeServlet.class);
+
+        @Override
+        protected void doGet(HttpServletRequest req, HttpServletResponse resp)
+                throws ServletException, IOException {
+            logger.info("WelcomeServlet - loading welcome page");
+            req.getRequestDispatcher("/welcome.jsp").forward(req, resp);
+        }
+    }
 }
